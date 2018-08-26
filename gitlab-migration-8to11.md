@@ -67,6 +67,11 @@ Checar a instalação:
     sudo chmod -R ug+rwX,o-rwx /var/opt/gitlab/git-data/repositories
     sudo chmod -R ug-s /var/opt/gitlab/git-data/repositories
     sudo find /var/opt/gitlab/git-data/repositories -type d -print0 | sudo xargs -0 chmod g+s
+    
+    sudo chown -R git /var/opt/gitlab/gitlab-rails/uploads
+    sudo find /var/opt/gitlab/gitlab-rails/uploads -type f -exec chmod 0644 {} \;
+    sudo find /var/opt/gitlab/gitlab-rails/uploads -type d -not -path /var/opt/gitlab/gitlab-rails/uploads -exec chmod 0700 {} \;
+
 
 
 ## UPGRADE 8.5.9  > 8.17.8
@@ -89,11 +94,7 @@ Checar a instalação:
 
     sudo gitlab-rake gitlab:check SANITIZE=true
 
-**Se necessário** e corrigir erros (os erro apresentados, no geral, já apresentam a solução). Solução de erro comumente apresentada para essa etapa:
-
-    sudo chown -R git /var/opt/gitlab/gitlab-rails/uploads
-    sudo find /var/opt/gitlab/gitlab-rails/uploads -type f -exec chmod 0644 {} \;
-    sudo find /var/opt/gitlab/gitlab-rails/uploads -type d -not -path /var/opt/gitlab/gitlab-rails/uploads -exec chmod 0700 {} \;
+**Se necessário** e corrigir erros apresentados.
 
 ## UPGRADE 8.17.8 > 9.5.9
 	
