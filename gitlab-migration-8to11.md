@@ -102,7 +102,7 @@ Checar a instalação:
 
     sudo dpkg -i gitlab-ce_9.5.9-ce.0_amd64.deb
 
-Se o seu Gitlab tiver muitos dados,pode ser necessário aumentar memória do POSTGRESQL. Para isso, altere o `gitlab.rb`:
+Se o seu Gitlab tiver muitos dados,pode ser necessário aumentar memória do POSTGRESQL para a próxima atualização. Para isso, altere o `gitlab.rb`:
 
     # /etc/gitlab/gitlab.rb
     postgresql['shared_buffers'] = "8192MB"
