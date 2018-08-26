@@ -141,6 +141,10 @@ Trata-se de um bug que será corrigido na próxima atualização
 
 ## UPGRADE 10.0.0 > 11.0.4
 
+Instalar o repostório do Gitlab CE:
+
+    curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+
 Instalar versão 10.7.0. Agora, no `Ubuntu 18` pelo menos, já podemos usar o `apt-get`:
 
     sudo apt-get install gitlab-ce=10.7.0-ce.0
