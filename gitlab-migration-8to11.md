@@ -38,9 +38,10 @@ Executar o gitlab:
 
     sudo gitlab-ctl start
 
-Copiar (ou mover) o backup do gitlab para a pasta de backups:
+Copiar (ou mover) o backup do gitlab para a pasta de backups e dê permissão ao usuário `git`:
 
     sudo cp 1530973830_gitlab_backup.tar /var/opt/gitlab/backups/
+    sudo chown git:git /var/opt/gitlab/backups/1530973830_gitlab_backup.tar
 
 Parar os serviços que se conectam ao banco
 
