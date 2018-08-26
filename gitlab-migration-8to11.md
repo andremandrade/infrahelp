@@ -137,7 +137,9 @@ Se checar instalação, você verá que existe um problema:
 	    Git version >= 2.7.3 ? ... Exception: undefined method ' 'run_command' for SystemCheck::App::GitVersionCheck:Class
 	    Did you mean?  run_commands
 
-Trata-se de um bug que será corrigido na próxima atualização
+Trata-se de um bug que será corrigido na próxima atualização.
+
+Se quaisquer outros erros aparecerem, siga as instruções do log apresentado para corrigí-los e reexecute até que restem apenas os erros acima.
 
 ## UPGRADE 10.0.0 > 11.0.4
 
