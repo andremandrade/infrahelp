@@ -16,7 +16,7 @@ Gerar backup na maquina de produção
 
 Fazer backup das configuracoes
 
-    tar -vczf /etc/gitlab
+    tar -vczf gitlab-conf.tar.zg /etc/gitlab
 
 Tranferir os dois backups para a VM da nova instância
 
